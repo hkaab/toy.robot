@@ -29,6 +29,8 @@ Example Input and Output
 
 Example 1 Input
 
+````
+
 > PLACE 0,0,NORTH
 
 > MOVE
@@ -37,7 +39,11 @@ Example 1 Input
 
 Output: 0,1,NORTH
 
+````
+
 Example 2 Input
+
+````
 
 > PLACE 0,0,NORTH
 
@@ -47,7 +53,11 @@ Example 2 Input
 
 Output: 0,0,WEST
 
+````
+
 Example 3 Input
+
+````
 
 > PLACE 1,2,EAST
 
@@ -65,6 +75,7 @@ Output: 3,3,NORTH
 
 Example 4 Input
 
+````
 > PLACE 1,2,EAST
 
 > MOVE
@@ -80,6 +91,8 @@ Example 4 Input
 > REPORT
 
 Output: 3,2,NORTH
+
+````
 
 
 **Setup Dev Environment**
@@ -130,3 +143,17 @@ Please goto https://github.com/hkaabasl/ToyRobot/actions
 **screen shots**
 
 Example of the application commands and output added in the docs folder
+
+
+**NOTE**
+
+If you need to change table top config you need to edit the appsettings.json
+
+````
+{
+  "Tabletop": {
+    "Rows": 6,
+    "Cols": 6
+  }
+}
+````
