@@ -36,7 +36,7 @@ namespace ToyRobot.Simulator
 
                     if (string.IsNullOrEmpty(operation))
                         continue;
-                    if (operation.ToLower() == "exit" || operation.ToLower() == "quit")
+                    if (operation.ToLower() == "exit" || operation.ToLower() == "quit" || operation.ToLower() == "stop" || operation.ToLower() == "off")
                         break;
 
                     var command = operation.IndexOf(" ") > 0 ? operation[..operation.IndexOf(" ")].FirstCharToUpper() : operation.FirstCharToUpper();

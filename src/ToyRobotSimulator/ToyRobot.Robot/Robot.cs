@@ -109,8 +109,11 @@ namespace ToyRobot.Builder
                 if (_x > _tabletop.Cols || _y > _tabletop.Rows)
                     throw new Exception();
                 _position = new Position(_x, _y);
-                if (_param.Length==3 && _param[2]!=null)
+                if (_param.Length == 3 && _param[2] != null)
                     _ = Enum.TryParse(_param[2], out _direction);
+                else
+                    if (!_isPlaced)
+                    throw new Exception("Place direction is not specified");
                 _isPlaced = true;
                 return true;
             }
