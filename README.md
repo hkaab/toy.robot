@@ -16,6 +16,7 @@ RIGHT
 REPORT
 
 **Extra commands to stop the robot simulation**
+
 QUIT
 
 EXIT
