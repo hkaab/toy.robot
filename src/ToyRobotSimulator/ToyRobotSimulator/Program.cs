@@ -11,8 +11,6 @@ var serviceProvider = services.BuildServiceProvider();
 serviceProvider.GetService<EntryPoint>().Run();
 #pragma warning restore CS8602
 
-Console.ReadLine();
-
 static void UnhandledExceptionTrapper(object sender, UnhandledExceptionEventArgs e)
 {
     Console.WriteLine(((System.Exception)e.ExceptionObject).Message);

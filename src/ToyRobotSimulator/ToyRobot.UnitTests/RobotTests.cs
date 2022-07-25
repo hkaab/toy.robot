@@ -17,7 +17,7 @@ namespace ToyRobot.UnitTests
         }
 
         [Fact]
-        public void WhenRobotCreated_AndPlacedInValidPosition_ShouldBeAbleToMove()
+        public void WhenRobotCreated_AndPlacedValidPosition_ShouldBeAbleToMove()
         {
             var robot = new Robot(new Domain.Tabletop(6, 6));
             robot.Place("0,0,NORTH");
@@ -26,7 +26,7 @@ namespace ToyRobot.UnitTests
         }
 
         [Fact]
-        public void WhenRobotCreated_AndPlacedInValidPosition_ShouldBeAbleToLeft()
+        public void WhenRobotCreated_AndPlacedValidPosition_ShouldBeAbleToLeft()
         {
             var robot = new Robot(new Domain.Tabletop(6, 6));
             robot.Place("0,0,NORTH");
@@ -34,7 +34,7 @@ namespace ToyRobot.UnitTests
             Assert.Equal("0,0,WEST", robot.Report());
         }
         [Fact]
-        public void WhenRobotCreated_AndPlacedInValidPosition_ShouldBeAbleToMoveMoveLeftMove()
+        public void WhenRobotCreated_AndPlacedValidPosition_ShouldBeAbleToMoveMoveLeftMove()
         {
             var robot = new Robot(new Domain.Tabletop(6, 6));
             robot.Place("1,2,EAST");
@@ -46,7 +46,7 @@ namespace ToyRobot.UnitTests
         }
 
         [Fact]
-        public void WhenRobotCreated_PlacedInValidPosition_ShouldBeAbleToMoveLeftMovePlaceMove()
+        public void WhenRobotCreated_AndPlacedValidPosition_ShouldBeAbleToMoveLeftMovePlaceMove()
         {
             var robot = new Robot(new Domain.Tabletop(6, 6));
             robot.Place("1,2,EAST");
@@ -56,6 +56,19 @@ namespace ToyRobot.UnitTests
             Assert.True(robot.Place("3,1"));
             Assert.True(robot.Move());
             Assert.Equal("3,2,NORTH", robot.Report());
+        }
+        [Fact]
+        public void WhenRobotCreated_AndPlacedWithoutDirection_ShouldThrowError()
+        {
+            var robot = new Robot(new Domain.Tabletop(6, 6));
+            Assert.Throws<Exception>(() => robot.Place("1,2"));
+        }
+        [Fact]
+        public void WhenRobotCreated_AndPlacedWithDirectionSubsequentPlace_CanOnlyProvideCoordinates()
+        {
+            var robot = new Robot(new Domain.Tabletop(6, 6));
+            robot.Place("1,2,EAST");
+            Assert.True(robot.Place("3,1"));
         }
 
     }
