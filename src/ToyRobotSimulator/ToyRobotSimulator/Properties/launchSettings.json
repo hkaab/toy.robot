@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ToyRobot.Simulator": {
+      "commandName": "Project",
+      "commandLineArgs": "PLACE 0,0,NORTH"
+    }
+  }
+}
