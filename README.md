@@ -3,6 +3,7 @@
 ![workflow](https://github.com/hkaabasl/ToyRobot/actions/workflows/ci.yml/badge.svg)
 
 **Scenario**
+
 Create a library that can read in commands of the following form:
 
 PLACE X, Y, DIRECTION
@@ -25,7 +26,7 @@ STOP
 
 OFF
 
-Example Input and Output
+**Example Input and Output**
 
 Example 1 Input
 
