@@ -117,11 +117,19 @@ Go to the cloned toyrobot project directoy
 
 ex: cd c:\Projects\ToyRobot\src\ToyRobotSimulator\ToyRobotSimulator\bin\Debug\net6.0\
 
+````
+
 > ToyRobot.Simulator.exe
+
+````
 
 or 
 
+````
+
 > dotnet ToyRobot.Simulator.dll
+
+````
 
 
 **Running the Robot Simulator unit tests with .net cli**
@@ -132,8 +140,11 @@ Go to the cloned toyrobot project directoy
 
 ex: cd c:\Projects\ToyRobot\src\ToyRobotSimulator
 
+````
+
 > dotnet test ToyRobot.sln
 
+````
 
 
 **Check Robot Simulator Continuous integration using GitHub Actions**
