@@ -61,7 +61,8 @@ namespace ToyRobot.UnitTests
         public void WhenRobotCreated_AndPlacedWithoutDirection_ShouldThrowError()
         {
             var robot = new Robot(new Domain.Tabletop(6, 6));
-            Assert.Throws<Exception>(() => robot.Place("1,2"));
+            var exception = Assert.Throws<ArgumentException>(() => robot.Place("1,2"));
+            Assert.Equal("Direction is not specified", exception.Message);
         }
         [Fact]
         public void WhenRobotCreated_AndPlacedWithDirectionSubsequentPlace_CanOnlyProvideCoordinates()
