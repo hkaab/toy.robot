@@ -42,7 +42,10 @@ namespace ToyRobot.Simulator
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine("Command is not well formed");
+                    if (e.InnerException is ArgumentException)
+                        Console.WriteLine(e.InnerException.Message);
+                    else
+                        Console.WriteLine("Command is not well formed");
                     _logger.LogError(e, e.Message);
                 }
             }

@@ -96,23 +96,23 @@ namespace ToyRobot.Builder
         {
             var _param = param.Split(",");
             if (_param.Length < 2)
-                throw new Exception("Place params are not valid");
+                throw new ArgumentException("Place params are not valid");
 
             if (!ushort.TryParse(_param[0], out var _x) ||
                 !ushort.TryParse(_param[1], out var _y))
-                throw new Exception("Position is not valid");
+                throw new ArgumentException("Position is not valid");
 
             if (_x > _tabletop.Cols || _y > _tabletop.Rows)
-                throw new Exception("Position is out of table");
+                throw new ArgumentException("Position is out of table");
             _position = new Position(_x, _y);
             if (_param.Length == 3 && _param[2] != null)
             {
                 if (!Enum.TryParse(_param[2].ToUpper(), out _direction))
-                    throw new Exception("Direction is not valid");
+                    throw new ArgumentException("Direction is not valid");
             }
             else
                 if (!_isPlaced)
-                  throw new Exception("Direction is not specified");
+                  throw new ArgumentException("Direction is not specified");
             _isPlaced = true;
             return true;
         }
