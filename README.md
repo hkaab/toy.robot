@@ -158,7 +158,9 @@ Please goto https://github.com/hkaabasl/ToyRobot/actions
 Example of the application commands and output added in the docs folder
 
 
-**NOTE**
+**NOTE for Table top**
+
+![](https://github.com/hkaabasl/ToyRobot/blob/main/docs/TableTop.png?raw=true)
 
 If you need to change table top config you need to edit the appsettings.json
 
