@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Interfaces\ToyRobot.Interfaces.csproj" />
     <ProjectReference Include="..\ToyRobot.Domain\ToyRobot.Domain.csproj" />
+    <ProjectReference Include="..\ToyRobot.Interfaces\ToyRobot.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>
