@@ -27,7 +27,7 @@ namespace ToyRobot.Simulator
                 try
                 {
 
-                    var operation = GetOperation();
+                    var operation = GetOperation().Trim();
 
                     if (string.IsNullOrEmpty(operation))
                         continue;
