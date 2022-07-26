@@ -125,6 +125,7 @@ namespace ToyRobot.Builder
             else
                 if (!_isPlaced)
                   throw new ArgumentException("Direction is not specified");
+
             _isPlaced = true;
             return true;
         }
