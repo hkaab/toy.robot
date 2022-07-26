@@ -15,29 +15,41 @@ namespace ToyRobot.Builder
         }
         public bool Move()
         {
-            //ignore
             if (!_isPlaced || _position == null)
                 return false;
+            bool isMoved = false;
             switch (_direction)
             {
                 case Direction.NORTH:
                     if (_position.Y < _tabletop.Rows - 1)
+                    {
                         _position.Y++;
+                        isMoved = true;
+                    }
                     break;
                 case Direction.SOUTH:
                     if (_position.Y > 0)
+                    {
                         _position.Y--;
+                        isMoved = true;
+                    }
                     break;
                 case Direction.EAST:
                     if (_position.X < _tabletop.Cols - 1)
+                    {
                         _position.X++;
+                        isMoved = true;
+                    }
                     break;
                 case Direction.WEST:
                     if (_position.X > 0)
+                    {
                         _position.X--;
+                        isMoved = true;
+                    }
                     break;
             }
-            return true;
+            return isMoved;
         }
         public string Report()
         {

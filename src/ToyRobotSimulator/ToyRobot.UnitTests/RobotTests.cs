@@ -121,6 +121,26 @@ namespace ToyRobot.UnitTests
             Assert.Equal("Place params are not valid", exception.Message);
         }
 
-
+        [Fact]
+        public void WhenRobotCreated_AndPlaced_ShouldNotMoveAndPreventFalling()
+        {
+            var robot = new Robot(new Domain.Tabletop(6, 6));
+            robot.Place("0,5,North");
+            Assert.False(robot.Move());
+            robot.Place("5,5,North");
+            Assert.False(robot.Move());
+            robot.Place("0,0,South");
+            Assert.False(robot.Move());
+            robot.Place("5,0,South");
+            Assert.False(robot.Move());
+            robot.Place("5,0,East");
+            Assert.False(robot.Move());
+            robot.Place("5,5,East");
+            Assert.False(robot.Move());
+            robot.Place("0,0,West");
+            Assert.False(robot.Move());
+            robot.Place("0,5,West");
+            Assert.False(robot.Move());
+        }
     }
 }
