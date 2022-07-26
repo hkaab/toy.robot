@@ -119,6 +119,18 @@ namespace ToyRobot.UnitTests
 
             exception = Assert.Throws<ArgumentException>(() => robot.Place("1 2 North"));
             Assert.Equal("Place params are not valid", exception.Message);
+
+            exception = Assert.Throws<ArgumentException>(() => robot.Place(""));
+            Assert.Equal("Place params are not valid", exception.Message);
+
+            exception = Assert.Throws<ArgumentException>(() => robot.Place(" "));
+            Assert.Equal("Place params are not valid", exception.Message);
+
+#pragma warning disable CS8625 
+            exception = Assert.Throws<ArgumentException>(() => robot.Place(null));
+#pragma warning restore CS8625 
+            Assert.Equal("Place params are not valid", exception.Message);
+
         }
 
         [Fact]

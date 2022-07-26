@@ -106,7 +106,10 @@ namespace ToyRobot.Builder
         }
         public bool Place(string param)
         {
-            var _param = param.Split(",");
+            if (string.IsNullOrEmpty(param))
+                throw new ArgumentException("Place params are not valid");
+
+            var _param = param.Trim().Split(",");
             if (_param.Length < 2)
                 throw new ArgumentException("Place params are not valid");
 
