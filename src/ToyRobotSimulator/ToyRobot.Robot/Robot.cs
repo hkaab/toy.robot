@@ -46,7 +46,7 @@ namespace ToyRobot.Builder
                 report = $"{_position},{_direction}";
             Console.WriteLine(report);
             return report;
-       }
+        }
         public bool Left()
         {
             //ignore
@@ -94,31 +94,27 @@ namespace ToyRobot.Builder
         }
         public bool Place(string param)
         {
-            try
+            var _param = param.Split(",");
+            if (_param.Length < 2)
+                throw new Exception("Place params are not valid");
+
+            if (!ushort.TryParse(_param[0], out var _x) ||
+                !ushort.TryParse(_param[1], out var _y))
+                throw new Exception("Position is not valid");
+
+            if (_x > _tabletop.Cols || _y > _tabletop.Rows)
+                throw new Exception("Position is out of table");
+            _position = new Position(_x, _y);
+            if (_param.Length == 3 && _param[2] != null)
             {
-                var _param = param.Split(",");
-                if (_param.Length<2)
-                    throw new Exception("Place params are not valid");
-                var _x = ushort.Parse(_param[0]);
-                var _y = ushort.Parse(_param[1]);
-                if (_x > _tabletop.Cols || _y > _tabletop.Rows)
-                    throw new Exception();
-                _position = new Position(_x, _y);
-                if (_param.Length == 3 && _param[2] != null)
-                {
-                    if (!Enum.TryParse(_param[2].ToUpper(), out _direction))
-                        throw new Exception("Direction is not valid");
-                }
-                else
-                    if (!_isPlaced)
-                    throw new Exception("Place direction is not specified");
-                _isPlaced = true;
-                return true;
+                if (!Enum.TryParse(_param[2].ToUpper(), out _direction))
+                    throw new Exception("Direction is not valid");
             }
-            catch
-            {
-                throw new Exception("Place arguments are not valid");
-            }
+            else
+                if (!_isPlaced)
+                  throw new Exception("Direction is not specified");
+            _isPlaced = true;
+            return true;
         }
     }
 }
