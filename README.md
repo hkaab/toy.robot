@@ -148,7 +148,8 @@ ex: cd c:\Projects\ToyRobot\src\ToyRobotSimulator
 ````
 
 
-**Check Robot Simulator Continuous integration using GitHub Actions**
+**Continuous integration using GitHub Actions**
+===============================================
 
 Please goto https://github.com/hkaabasl/ToyRobot/actions
 
