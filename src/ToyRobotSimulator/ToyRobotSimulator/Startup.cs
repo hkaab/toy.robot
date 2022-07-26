@@ -1,8 +1,8 @@
-﻿using ToyRobot.Interfaces;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using ToyRobot.Builder;
 using ToyRobot.Domain;
+using ToyRobot.Interfaces;
 
 namespace ToyRobot.Simulator
 {

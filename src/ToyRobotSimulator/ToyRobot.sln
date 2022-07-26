@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToyRobot.Domain", "ToyRobot
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToyRobot.Builder", "ToyRobot.Robot\ToyRobot.Builder.csproj", "{2FE087BD-5263-427B-B7BB-CB24C071691E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToyRobot.Interfaces", "Interfaces\ToyRobot.Interfaces.csproj", "{FF0BDB3F-3D5D-45BA-8202-93BEF4796A59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToyRobot.Interfaces", "ToyRobot.Interfaces\ToyRobot.Interfaces.csproj", "{FF0BDB3F-3D5D-45BA-8202-93BEF4796A59}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{8E0F6699-F77F-4989-ADBE-3CCFD787EC2E}"
 EndProject
