@@ -154,7 +154,12 @@ ex: cd c:\Projects\ToyRobot\src\ToyRobotSimulator
 Please goto https://github.com/hkaabasl/ToyRobot/actions
 
 
-**screen shots**
+
+**WIKI**
+========
+
+
+**Screen shots**
 
 Example of the application commands and output added in the docs folder
 
