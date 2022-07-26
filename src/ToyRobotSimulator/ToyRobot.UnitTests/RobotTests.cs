@@ -71,5 +71,44 @@ namespace ToyRobot.UnitTests
             Assert.True(robot.Place("3,1"));
         }
 
+        [Fact]
+        public void WhenRobotCreated_AndPlacedWithDirectionWhenLeft_ShouldRotateAntiClockWise()
+        {
+            var robot = new Robot(new Domain.Tabletop(6, 6));
+            robot.Place("0,0,EAST");
+            Assert.True(robot.Left());
+            Assert.Equal("0,0,NORTH", robot.Report());
+            Assert.True(robot.Left());
+            Assert.Equal("0,0,WEST", robot.Report());
+            Assert.True(robot.Left());
+            Assert.Equal("0,0,SOUTH", robot.Report());
+            Assert.True(robot.Left());
+            Assert.Equal("0,0,EAST", robot.Report());
+        }
+        [Fact]
+        public void WhenRobotCreated_AndPlacedWithDirectionWhenRight_ShouldRotateClockWise()
+        {
+            var robot = new Robot(new Domain.Tabletop(6, 6));
+            robot.Place("0,0,EAST");
+            Assert.True(robot.Right());
+            Assert.Equal("0,0,SOUTH", robot.Report());
+            Assert.True(robot.Right());
+            Assert.Equal("0,0,WEST", robot.Report());
+            Assert.True(robot.Right());
+            Assert.Equal("0,0,NORTH", robot.Report());
+            Assert.True(robot.Right());
+            Assert.Equal("0,0,EAST", robot.Report());
+        }
+        [Fact]
+        public void WhenRobotCreated_AndPlacedWithWrongParam_ShouldThrowError()
+        {
+            var robot = new Robot(new Domain.Tabletop(6, 6));
+            Assert.Throws<Exception>(() => robot.Place("10,2"));
+            Assert.Throws<Exception>(() => robot.Place("1,2,Somewhere"));
+            Assert.Throws<Exception>(() => robot.Place("p1,p2,North"));
+            Assert.Throws<Exception>(() => robot.Place("1 2 North"));
+        }
+
+
     }
 }

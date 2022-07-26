@@ -7,13 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToyRobot.Simulator", "ToyRo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToyRobot.Domain", "ToyRobot.Domain\ToyRobot.Domain.csproj", "{EBD40019-6272-4629-9E56-2F3C6A052B51}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToyRobot.Builder", "ToyRobot.Robot\ToyRobot.Builder.csproj", "{2FE087BD-5263-427B-B7BB-CB24C071691E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToyRobot.Builder", "ToyRobot.Robot\ToyRobot.Builder.csproj", "{2FE087BD-5263-427B-B7BB-CB24C071691E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interfaces", "Interfaces\Interfaces.csproj", "{FF0BDB3F-3D5D-45BA-8202-93BEF4796A59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToyRobot.Interfaces", "Interfaces\ToyRobot.Interfaces.csproj", "{FF0BDB3F-3D5D-45BA-8202-93BEF4796A59}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{8E0F6699-F77F-4989-ADBE-3CCFD787EC2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToyRobot.UnitTests", "ToyRobot.UnitTests\ToyRobot.UnitTests.csproj", "{B06E79C2-E568-4713-9F85-E258C918AE8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToyRobot.UnitTests", "ToyRobot.UnitTests\ToyRobot.UnitTests.csproj", "{B06E79C2-E568-4713-9F85-E258C918AE8E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
