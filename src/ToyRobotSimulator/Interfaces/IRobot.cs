@@ -1,6 +1,4 @@
-﻿using ToyRobot.Domain;
-
-namespace Interfaces
+﻿namespace ToyRobot.Interfaces
 {
     public interface IRobot
     {

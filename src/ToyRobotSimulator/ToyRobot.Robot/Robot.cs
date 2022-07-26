@@ -1,4 +1,4 @@
-﻿using Interfaces;
+﻿using ToyRobot.Interfaces;
 using ToyRobot.Domain;
 
 namespace ToyRobot.Builder
@@ -16,35 +16,28 @@ namespace ToyRobot.Builder
         public bool Move()
         {
             //ignore
-            if (!_isPlaced || _position==null)
+            if (!_isPlaced || _position == null)
                 return false;
-            try
+            switch (_direction)
             {
-                switch(_direction)
-                {
-                    case Direction.NORTH:
-                        if (_position.Y<_tabletop.Rows-1)
-                            _position.Y++;
-                        break;
-                    case Direction.SOUTH:
-                        if (_position.Y > 0)
-                            _position.Y--;
-                        break;
-                    case Direction.EAST:
-                        if (_position.X < _tabletop.Cols - 1)
-                            _position.X++;
-                        break;
-                    case Direction.WEST:
-                        if (_position.X > 0)
-                            _position.X--;
-                        break;
-                }
-                return true;
+                case Direction.NORTH:
+                    if (_position.Y < _tabletop.Rows - 1)
+                        _position.Y++;
+                    break;
+                case Direction.SOUTH:
+                    if (_position.Y > 0)
+                        _position.Y--;
+                    break;
+                case Direction.EAST:
+                    if (_position.X < _tabletop.Cols - 1)
+                        _position.X++;
+                    break;
+                case Direction.WEST:
+                    if (_position.X > 0)
+                        _position.X--;
+                    break;
             }
-            catch
-            {
-                throw new Exception("Place arguments are not valid");
-            }
+            return true;
         }
         public string Report()
         {
@@ -104,13 +97,18 @@ namespace ToyRobot.Builder
             try
             {
                 var _param = param.Split(",");
-                ushort.TryParse(_param[0], out ushort _x);
-                ushort.TryParse(_param[1], out ushort _y);
+                if (_param.Length<2)
+                    throw new Exception("Place params are not valid");
+                var _x = ushort.Parse(_param[0]);
+                var _y = ushort.Parse(_param[1]);
                 if (_x > _tabletop.Cols || _y > _tabletop.Rows)
                     throw new Exception();
                 _position = new Position(_x, _y);
                 if (_param.Length == 3 && _param[2] != null)
-                    _ = Enum.TryParse(_param[2], out _direction);
+                {
+                    if (!Enum.TryParse(_param[2].ToUpper(), out _direction))
+                        throw new Exception("Direction is not valid");
+                }
                 else
                     if (!_isPlaced)
                     throw new Exception("Place direction is not specified");

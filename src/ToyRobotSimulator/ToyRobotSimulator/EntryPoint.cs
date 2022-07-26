@@ -1,10 +1,5 @@
-﻿using Interfaces;
+﻿using ToyRobot.Interfaces;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ToyRobot.Builder;
 using ToyRobot.Simulator.Extensions;
 
