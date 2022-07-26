@@ -37,8 +37,10 @@ namespace ToyRobot.Simulator
                     var command = operation.IndexOf(" ") > 0 ? operation[..operation.IndexOf(" ")].FirstCharToUpper() : operation.FirstCharToUpper();
                     var commandArg = operation.IndexOf(" ") > 0 ? operation[operation.IndexOf(" ")..].Replace(" ", "") : null;
 
+#pragma warning disable CS8602 
                     _ = typeof(Robot).GetMethod(command)
                                      .Invoke(_robot, commandArg != null ? new string[] { commandArg } : null);
+#pragma warning restore CS8602 
                 }
                 catch (Exception e)
                 {
