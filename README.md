@@ -37,7 +37,7 @@ OFF
 
 * PLACE will put the toy robot on the table in position X,Y and facing NORTH, SOUTH, EAST or WEST.
 
-* (0,0) can be considered as the SOUTH WEST corner and (5,5) as the NORTH EAST corner.
+* (0,0) can be considered as the SOUTH WEST corner and (6,6) as the NORTH EAST corner.
 
 * The first valid command to the robot is a PLACE command. After that, any sequence of commands may be issued, in any order, including another PLACE command. The library should discard all commands in the sequence until a valid PLACE command has been executed.
 
