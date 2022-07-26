@@ -122,7 +122,7 @@ namespace ToyRobot.UnitTests
         }
 
         [Fact]
-        public void WhenRobotCreated_AndPlaced_ShouldNotMoveAndPreventFalling()
+        public void WhenRobotCreated_AndPlacedWhenWrongMove_ShouldNotMoveAndPreventFalling()
         {
             var robot = new Robot(new Domain.Tabletop(6, 6));
             robot.Place("0,5,North");
