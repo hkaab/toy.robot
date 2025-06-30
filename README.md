@@ -1,6 +1,6 @@
 # ToyRobot  (requires .NET 6.0)
 
-![workflow](https://github.com/hkaabasl/ToyRobot/actions/workflows/ci.yml/badge.svg)
+![workflow](https://github.com/hkaab/toy.robot/actions/workflows/ci.yml/badge.svg)
 
 **Scenario**
 
@@ -144,7 +144,7 @@ Run command prompt (CMD)
 
 Go to the cloned toyrobot project directoy 
 
-ex: cd c:\Projects\ToyRobot\src\ToyRobotSimulator\ToyRobotSimulator\bin\Debug\net6.0\
+ex: cd c:\Projects\toy.robot\src\ToyRobotSimulator\ToyRobotSimulator\bin\Debug\net6.0\
 
 ````
 
@@ -167,7 +167,7 @@ Run command prompt (CMD)
 
 Go to the cloned toyrobot project directoy 
 
-ex: cd c:\Projects\ToyRobot\src\ToyRobotSimulator
+ex: cd c:\Projects\toy.robot\src\ToyRobotSimulator
 
 ````
 
@@ -179,7 +179,7 @@ ex: cd c:\Projects\ToyRobot\src\ToyRobotSimulator
 **Continuous integration using GitHub Actions**
 ===============================================
 
-Please goto https://github.com/hkaabasl/ToyRobot/actions
+Please goto https://github.com/hkaab/toy.robot/actions
 
 
 
@@ -194,7 +194,7 @@ Example of the application commands and output added in the docs folder
 
 **NOTE for Table top**
 
-![](https://github.com/hkaabasl/ToyRobot/blob/main/docs/TableTop.png?raw=true)
+![](https://github.com/hkaab/toy.robot/blob/main/docs/TableTop.png?raw=true)
 
 If you need to change table top config you need to edit the appsettings.json
 
